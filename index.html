@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla js Challenge!</title>
+  </head>
+  <body>
+    <div class="screen-one fullscr">
+      <div class="weather"><p></p></div>
+      <div class="time">
+        <p></p>
+        <p></p>
+      </div>
+      <form class="login-form hidden">
+        <input
+          type="text"
+          class="login-form__input"
+          placeholder="이름을 입력해주세요"
+          required
+        />
+      </form>
+      <p class="greeting hidden"></p>
+    </div>
+    <div class="screen-two shrink">
+      <form class="todo-form">
+        <input
+          type="text"
+          class="todo-form__text"
+          placeholder="해야 할 일"
+          required
+        />
+        <input type="datetime-local" id="datetime" class="todo-form__date" />
+      </form>
+      <div class="todo-list">
+        <ul></ul>
+        <ul></ul>
+      </div>
+    </div>
+    <p class="quotes"></p>
+    <script src="src/js/background.js"></script>
+    <script src="src/js/clock.js"></script>
+    <script src="src/js/login.js"></script>
+    <script src="src/js/quotes.js"></script>
+    <script src="src/js/todo.js"></script>
+    <script src="src/js/weather.js"></script>
+  </body>
+</html>

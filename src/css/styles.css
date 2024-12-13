@@ -1,0 +1,172 @@
+@import "reset.css";
+html {
+  font-size: 8vw;
+}
+body {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* input, form 관련 */
+input {
+  font-size: 0.25rem;
+  background: none;
+  border: none;
+  color: white;
+}
+input::placeholder {
+  color: white;
+  font-weight: 400;
+}
+.login-form {
+  display: flex;
+  align-items: flex-start;
+}
+.login-form__input {
+  height: 0.5rem;
+  text-align: center;
+  border-bottom: 2px solid white;
+  width: 25vw;
+}
+.login-form__input:focus::placeholder {
+  color: transparent;
+}
+.todo-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 12vh;
+  border-bottom: 3px solid white;
+  width: 95%;
+}
+.todo-form input[type="text"] {
+  font-size: 0.3rem;
+  width: 100%;
+  padding-bottom: 0.4vh;
+}
+.todo-form input[type="datetime-local"] {
+  font-weight: 600;
+  font-size: 0.2rem;
+  width: 0;
+  padding-bottom: 0.8vh;
+  color: rgb(125, 125, 125);
+  border-top-right-radius: 1vh;
+  border-top-left-radius: 1vh;
+  transition: all 0.3s ease-in-out;
+}
+.todo-form:focus-within input[type="datetime-local"] {
+  background-color: white;
+  width: 38%;
+}
+/* 왼쪽 화면. time, greeting, weather */
+.screen-one {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38.2%;
+  height: 100vh;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all ease-in-out 0.3s;
+}
+.time {
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+.time p:first-child {
+  font-size: 0.3rem;
+}
+.time p:last-child {
+  font-size: 1rem;
+}
+.greeting {
+  font-size: 0.4rem;
+  text-align: center;
+}
+.weather {
+  position: absolute;
+  left: 3%;
+  top: 4%;
+  font-size: 0.15rem;
+}
+/* 오른쪽 화면. todo 관련  */
+.screen-two {
+  width: 61.8%;
+  height: 100vh;
+  transition: all ease-in-out 0.3s;
+}
+.todo-list {
+  box-sizing: border-box;
+  padding-top: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 77vh;
+  border-bottom: 2px solid white;
+  font-size: 0.3rem;
+}
+.todo-list ul {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  height: 100%;
+  gap: 1.5vh;
+  overflow-y: auto;
+}
+.todo-list ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.todo-list ul:last-child li > div {
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+  gap: 0.8vw;
+}
+.todo-list ul:last-child li div p:first-child {
+  font-size: 0.2rem;
+}
+.todo-list ul:last-child li div p:last-child {
+  font-size: 0.1rem;
+}
+.todo-list button {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  color: rgb(125, 125, 125);
+  font-weight: 800;
+}
+/* quotes */
+.quotes {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 8vh;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.2rem;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 5vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.fullscr {
+  width: 100%;
+}
+
+.shrink {
+  width: 0%;
+  visibility: hidden;
+}
