@@ -168,5 +168,5 @@ input::placeholder {
 
 .shrink {
   width: 0%;
-  visibility: hidden;
+  display: none;
 }
